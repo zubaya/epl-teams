@@ -1,0 +1,18 @@
+<h2>Angular App</h2>
+
+<h3>Squads</h3>
+<ul>
+  <li *ngFor="let squad of squads | async">{{squad.$value}}</li>
+</ul>
+
+
+
+<h3>Individuals</h3>
+<ul>
+  <li *ngFor="let individual of individuals | async">{{individual.name}} - {{(individual.squadName| async)?.$value}}</li>
+</ul>
+
+
+
+<h3>First Individual</h3>
+{{(selectedIndividual | async)?.name}}
